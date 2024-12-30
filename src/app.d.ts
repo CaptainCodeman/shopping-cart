@@ -1,9 +1,9 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 
 import type { Product } from '$lib/model/products'
-import type { Currencies as CurrencyCode } from 'country-to-currency'
-import { Cart } from '$lib/cart.svelte.test'
-import { Currency } from '$lib/currency.svelte.test'
+import type { Cart } from '$lib/cart.svelte'
+import type { Currency } from '$lib/currency.svelte'
+import type { CurrencyCode } from '$lib/currency'
 
 // for information about these interfaces
 declare global {
@@ -16,9 +16,6 @@ declare global {
 		}
 
 		interface PageData {
-			// locale: string
-			// selected_currency: Currency
-			// currencies: Currency[]
 			products: Product[]
 			currency: Currency
 			cart: Cart
